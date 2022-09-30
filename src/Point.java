@@ -28,9 +28,9 @@ public class Point {
     public void setY (int newY){
         y = newY;
     }
-    
+
     public String coordinate(){
-        String coord =  "( + x + ,  + y)";
+        String coord =  "(" + x + ","  + y + ")";
         return coord;
     }
 }
