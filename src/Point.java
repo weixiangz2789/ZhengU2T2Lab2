@@ -2,35 +2,61 @@ public class Point {
     private int x;
     private int y;
 
-    public Point(int x, int y){
+    public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
-    public Point(int number){
+
+    public Point(int number) {
         x = number;
         y = number;
     }
-    public Point (){
+
+    public Point() {
         x = 0;
         y = 0;
     }
 
-    public int getX (){
+    public int getX() {
         return x;
     }
-    public int getY (){
+
+    public int getY() {
         return y;
     }
 
-    public void setX (int newX){
+    public void setX(int newX) {
         x = newX;
     }
-    public void setY (int newY){
+
+    public void setY(int newY) {
         y = newY;
     }
 
-    public String coordinate(){
-        String coord =  "(" + x + ","  + y + ")";
-        return coord;
+    public String coordinate() {
+        return "(" + x + "," + y + ")";
+    }
+
+    public String quadrant() {
+        String quadrant = "";
+        if (x > 0 && y > 0){
+            quadrant = "I";
+        }
+        if (x < 0 && y < 0){
+            quadrant = "III";
+        }
+        if (x < 0 && y > 0){
+            quadrant = "II";
+        }
+        if (x > 0 && y < 0){
+            quadrant = "IV";
+        }
+        if (x == 0 || y == 0 ){
+            quadrant = "on an axis";
+        }
+        if (x == 0 && y == 0 ){
+            quadrant = "origin";
+        }
+        return quadrant;
     }
 }
